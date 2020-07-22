@@ -10,8 +10,13 @@
 
 function isEmptyString(string) {
   let result;
-  // Add your code here.
-  return result;
+  if (string == ""){
+    result = true
+  }else {
+    result = false
+  }
+  
+  return result ;
 }
 
 /* 
@@ -39,9 +44,15 @@ console.log(isEmptyString(" ") === false);
 
 function containsWordJava(text) {
   let result;
-  // Add your code here.
-  return result;
-}
+ let newText = text.toLowerCase() 
+  if (newText.includes("java")){
+    result = true;
+  }else {
+    result = false;
+  }
+  return result;}
+//  console.log(newText.includes("java"))
+
 
 /* 
   -------TESTS---------------------------------------------------------------
@@ -68,8 +79,7 @@ console.log(containsWordJava("JAVA IS FUN :D") === true);
 */
 
 function trimSentence(text, maxLength) {
-  // Add your code here.
-  return text;
+  let shortString = maxLength.substring(0, 16) + "…"
 }
 
 /* 
