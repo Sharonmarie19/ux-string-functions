@@ -10,13 +10,13 @@
 
 function isEmptyString(string) {
   let result;
-  if (string == ""){
-    result = true
-  }else {
-    result = false
+  if (string == "") {
+    result = true;
+  } else {
+    result = false;
   }
-  
-  return result ;
+
+  return result;
 }
 
 /* 
@@ -44,15 +44,15 @@ console.log(isEmptyString(" ") === false);
 
 function containsWordJava(text) {
   let result;
- let newText = text.toLowerCase() 
-  if (newText.includes("java")){
+  let newText = text.toLowerCase();
+  if (newText.includes("java")) {
     result = true;
-  }else {
+  } else {
     result = false;
   }
-  return result;}
+  return result;
+}
 //  console.log(newText.includes("java"))
-
 
 /* 
   -------TESTS---------------------------------------------------------------
@@ -80,15 +80,23 @@ console.log(containsWordJava("JAVA IS FUN :D") === true);
 
 function trimSentence(text, maxLength) {
   
-  return text;
+  
+  //  if ( str >) If text is less than maxLength leave it alone.  If greater limit the number and add ellipses
+  if (text.length < maxLength){
+    return text;
+    }else { 
+      let str = maxLength - 3; 
+      let newText = text.slice(0, str) + "...";
+      return newText;
+    }
+  
 
-}
 
 /* 
   -------TESTS---------------------------------------------------------------
   Run these commands to make sure you did it right. They should all be true.
 */
-console.log("-----Tests for Exercise One-----");
+console.log("-----Tests for Exercise Three-----");
 console.log("* Check Long sentence");
 console.log(
   trimSentence("The fox jumped over the fence to get to the farm.", 16) ===
@@ -110,10 +118,9 @@ console.log(trimSentence("Short", 16) === "Short");
   Hint: Look at the "slice" method.  You can set the first argument to zero to make it start at the beginning of the string.   (Watch out that slice returns a new string! You need to assign it to something)
 */
 
-function trimSentence(text, maxLength) {
-  
-  return text;
-}
+// function trimSentence(text, maxLength) {
+//   return text;
+// }
 
 /* 
   -------TESTS---------------------------------------------------------------
@@ -124,4 +131,4 @@ console.log("* Check Long sentence");
 console.log(
   trimSentence("The fox jumped over the fence to get to the farm.", 16) ===
     "The fox jumpe..."
-);
+
