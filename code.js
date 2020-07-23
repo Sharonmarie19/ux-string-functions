@@ -79,7 +79,9 @@ console.log(containsWordJava("JAVA IS FUN :D") === true);
 */
 
 function trimSentence(text, maxLength) {
-  let shortString = maxLength.substring(0, 16) + "…"
+  
+  return text;
+
 }
 
 /* 
@@ -109,7 +111,7 @@ console.log(trimSentence("Short", 16) === "Short");
 */
 
 function trimSentence(text, maxLength) {
-  // Add your code here.
+  
   return text;
 }
 
